@@ -31,7 +31,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-       
+       if(moveSpeed >= 15)
+       {
+            moveSpeed = 15;
+       }
+       if(moveSpeed <= 5)
+        {
+            moveSpeed = 5;
+        }
 
         MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         MoveVelocity = MoveInput * moveSpeed;

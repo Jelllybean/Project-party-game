@@ -6,16 +6,20 @@ public class SlowPlayer : MonoBehaviour {
 
     [SerializeField]
     private PlayerController _Player;
+    //[SerializeField]
+    //private GameObject SpeedUp;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            _Player.moveSpeed -= 2.5f;
+            //SpeedUp.SetActive(true);
+            //gameObject.SetActive(false);
+            _Player.moveSpeed -= 5;
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        gameObject.SetActive(false);
     }
 }
