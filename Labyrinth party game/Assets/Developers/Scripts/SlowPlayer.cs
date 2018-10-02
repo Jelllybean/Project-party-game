@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlowPlayer : MonoBehaviour {
 
     [SerializeField]
-    private PlayerController _Player;
+    private PlayerController1 _Player;
     [SerializeField]
     private GameObject SpeedUp;
 
