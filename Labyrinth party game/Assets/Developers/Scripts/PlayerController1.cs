@@ -14,9 +14,9 @@ public class PlayerController1 : MonoBehaviour {
     [SerializeField]
     private Camera MainCamera;
 
+    float ReverseControls;
 
-
-    bool ShotgunFired;
+    
 	void Start ()
     {
         PlayerRigid = GetComponent<Rigidbody>();
@@ -41,6 +41,13 @@ public class PlayerController1 : MonoBehaviour {
         }
 
         MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        if(ReverseControls >= 0)
+        {
+            MoveInput = -MoveInput;
+            ReverseControls -= Time.deltaTime;
+        }
+              
+        
         MoveVelocity = MoveInput * moveSpeed;
 
         Ray CameraRay = MainCamera.ScreenPointToRay(Input.mousePosition);
@@ -60,5 +67,10 @@ public class PlayerController1 : MonoBehaviour {
     private void FixedUpdate()
     {
         PlayerRigid.velocity = MoveVelocity;
-    }   
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        ReverseControls = 2f;
+    }
 }
