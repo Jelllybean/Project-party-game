@@ -20,7 +20,7 @@ public class SlowPlayer : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         _Player.moveSpeed = 10;
-        Invoke("EnableSpeed", 1f);
+        Invoke("EnableSpeed", 0.5f);
     }
 
     private void EnableSpeed()
