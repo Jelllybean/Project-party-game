@@ -22,7 +22,7 @@ public class SpeedUpPlayer : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             _Player.moveSpeed = 10;
-            Invoke("EnableSlow", 1f);
+            Invoke("EnableSlow", 0.5f);
         }
     }
     public void EnableSlow()
