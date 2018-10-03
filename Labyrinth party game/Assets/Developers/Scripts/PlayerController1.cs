@@ -71,7 +71,7 @@ public class PlayerController1 : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.name == "Reverser")
+        if (other.tag == "Reverser")
         {
             ReverseControls = 2f;
         }
