@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnlySpeedUp : MonoBehaviour {
 
     [SerializeField]
-    private PlayerController _Player;
+    private PlayerController1 _Player;
 
     private void OnTriggerEnter(Collider other)
     {
