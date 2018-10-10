@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XboxCtrlrInput;
 using UnityEngine.UI;
 
 public class PlayerController1 : MonoBehaviour {
 
     public float moveSpeed;
+    public XboxController PlayerNumber;
     private Rigidbody PlayerRigid;
 
     private Vector3 MoveInput;
@@ -36,11 +38,13 @@ public class PlayerController1 : MonoBehaviour {
             moveSpeed = 15;
        }
        if(moveSpeed <= 5)
-        {
-            moveSpeed = 5;
-        }
+       {     
+            moveSpeed = 5; 
+       }
 
-        MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        MoveInput.x = XCI.GetAxis(XboxAxis.LeftStickX, PlayerNumber);
+        MoveInput.z = XCI.GetAxis(XboxAxis.LeftStickY, PlayerNumber);
+        //MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         if(ReverseControls >= 0)
         {
             MoveInput = -MoveInput;
@@ -50,18 +54,17 @@ public class PlayerController1 : MonoBehaviour {
         
         MoveVelocity = MoveInput * moveSpeed;
 
-        Ray CameraRay = MainCamera.ScreenPointToRay(Input.mousePosition);
+        //Ray CameraRay = MainCamera.ScreenPointToRay(Input.mousePosition);
 
-        Plane worldPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLength;
-        if (worldPlane.Raycast(CameraRay, out rayLength))
-        {
-            Vector3 pointToLook = CameraRay.GetPoint(rayLength);
-            Debug.DrawLine(CameraRay.origin, pointToLook, Color.blue);
+        //Plane worldPlane = new Plane(Vector3.up, Vector3.zero);
+        //float rayLength;
+        //if (worldPlane.Raycast(CameraRay, out rayLength))
+        //{
+        //    Vector3 pointToLook = CameraRay.GetPoint(rayLength);
+        //    Debug.DrawLine(CameraRay.origin, pointToLook, Color.blue);
 
-            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-        }
-
+        //    transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+        //}
     }
 
     private void FixedUpdate()
