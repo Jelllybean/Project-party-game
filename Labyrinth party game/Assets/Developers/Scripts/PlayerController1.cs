@@ -44,7 +44,7 @@ public class PlayerController1 : MonoBehaviour {
 
         MoveInput.x = XCI.GetAxis(XboxAxis.LeftStickX, PlayerNumber);
         MoveInput.z = XCI.GetAxis(XboxAxis.LeftStickY, PlayerNumber);
-        MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        //MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         if(ReverseControls >= 0)
         {
             MoveInput = -MoveInput;

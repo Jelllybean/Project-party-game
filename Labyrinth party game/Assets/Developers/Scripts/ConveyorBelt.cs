@@ -6,7 +6,7 @@ public class ConveyorBelt : MonoBehaviour
 {
 
     [SerializeField]
-    private GameObject[] Player;
+    private GameObject[] playerObj;
 
     [SerializeField] private bool isRight;
     [SerializeField] private bool isLeft;
@@ -26,7 +26,7 @@ public class ConveyorBelt : MonoBehaviour
 
     void Update()
     {
-        _PlayerPos = Player[m_currentPlayer].transform.position;
+        _PlayerPos = playerObj[m_currentPlayer].transform.position;
     }
     private void OnTriggerStay(Collider other)
     {
@@ -56,19 +56,19 @@ public class ConveyorBelt : MonoBehaviour
     {
         if(isUp == true)
         {
-            Player[m_currentPlayer].transform.Translate(Vector3.forward * 7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.forward * 7.5f * Time.deltaTime, Space.World);
         }
         if(isDown == true)
         {
-            Player[m_currentPlayer].transform.Translate(Vector3.forward * -7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.forward * -7.5f * Time.deltaTime, Space.World);
         }
         if(isRight == true)
         {
-            Player[m_currentPlayer].transform.Translate(Vector3.right * 7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.right * 7.5f * Time.deltaTime, Space.World);
         }
         if(isLeft == true)
         {
-            Player[m_currentPlayer].transform.Translate(Vector3.right * -7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.right * -7.5f * Time.deltaTime, Space.World);
         }
     }
 }
