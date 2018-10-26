@@ -12,6 +12,7 @@ public class PlayerController1 : MonoBehaviour {
 
     private Vector3 MoveInput;
     private Vector3 MoveVelocity;
+    private Quaternion TurnInput;
 
     [SerializeField]
     private Camera MainCamera;
@@ -44,14 +45,14 @@ public class PlayerController1 : MonoBehaviour {
 
         MoveInput.x = XCI.GetAxis(XboxAxis.LeftStickX, PlayerNumber);
         MoveInput.z = XCI.GetAxis(XboxAxis.LeftStickY, PlayerNumber);
+        TurnInput.x = XCI.GetAxis(XboxAxis.RightStickX, PlayerNumber);
         //MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
         if(ReverseControls >= 0)
         {
             MoveInput = -MoveInput;
             ReverseControls -= Time.deltaTime;
         }
-              
-        
+
         MoveVelocity = MoveInput * moveSpeed;
 
         //Ray CameraRay = MainCamera.ScreenPointToRay(Input.mousePosition);
