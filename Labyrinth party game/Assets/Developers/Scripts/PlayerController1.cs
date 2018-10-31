@@ -39,7 +39,7 @@ public class PlayerController1 : MonoBehaviour {
        {
             moveSpeed = 15;
        }
-       if(moveSpeed <= 5)
+       if(moveSpeed <= 5 && moveSpeed >= 1)
        {     
             moveSpeed = 5; 
        }

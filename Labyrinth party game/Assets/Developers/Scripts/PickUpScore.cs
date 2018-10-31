@@ -20,10 +20,10 @@ public class PickUpScore : MonoBehaviour {
     }
     private void Update()
     {
-        print(_PlayerScore[0]);
-        print(_PlayerScore[1]);
-        print(_PlayerScore[2]);
-        print(_PlayerScore[3]);
+        //print(_PlayerScore[0]);
+        //print(_PlayerScore[1]);
+        //print(_PlayerScore[2]);
+        //print(_PlayerScore[3]);
     }
     private void OnTriggerEnter(Collider other)
     {
