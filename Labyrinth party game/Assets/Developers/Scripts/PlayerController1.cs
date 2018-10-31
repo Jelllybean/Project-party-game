@@ -8,11 +8,12 @@ public class PlayerController1 : MonoBehaviour {
 
     public float moveSpeed;
     public XboxController PlayerNumber;
+    public float RotationSpeed;
     private Rigidbody PlayerRigid;
 
     private Vector3 MoveInput;
     private Vector3 MoveVelocity;
-    private Quaternion TurnInput;
+    private Vector3 TurnInput;
 
     [SerializeField]
     private Camera MainCamera;
@@ -45,8 +46,9 @@ public class PlayerController1 : MonoBehaviour {
 
         MoveInput.x = XCI.GetAxis(XboxAxis.LeftStickX, PlayerNumber);
         MoveInput.z = XCI.GetAxis(XboxAxis.LeftStickY, PlayerNumber);
-        TurnInput.x = XCI.GetAxis(XboxAxis.RightStickX, PlayerNumber);
-        //MoveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        TurnInput.y += XCI.GetAxis(XboxAxis.RightStickX, PlayerNumber) * RotationSpeed;
+        transform.rotation = Quaternion.Euler(TurnInput);
+        
         if(ReverseControls >= 0)
         {
             MoveInput = -MoveInput;
@@ -54,18 +56,6 @@ public class PlayerController1 : MonoBehaviour {
         }
 
         MoveVelocity = MoveInput * moveSpeed;
-
-        //Ray CameraRay = MainCamera.ScreenPointToRay(Input.mousePosition);
-
-        //Plane worldPlane = new Plane(Vector3.up, Vector3.zero);
-        //float rayLength;
-        //if (worldPlane.Raycast(CameraRay, out rayLength))
-        //{
-        //    Vector3 pointToLook = CameraRay.GetPoint(rayLength);
-        //    Debug.DrawLine(CameraRay.origin, pointToLook, Color.blue);
-
-        //    transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
-        //}
     }
 
     private void FixedUpdate()
