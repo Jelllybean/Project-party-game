@@ -573,7 +573,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1535484125}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -2.4681954e-15, y: 0, z: 0}
 --- !u!95 &428265947
 Animator:
   serializedVersion: 3
@@ -660,11 +660,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 428265945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.059529744, y: 0.0757022, z: 0.09596776}
-  m_Center: {x: -0.0006753109, y: 0.09531817, z: 0.0044343052}
+  m_Size: {x: 0.048683453, y: 0.13915059, z: 0.06852951}
+  m_Center: {x: 0.0059718834, y: 0.06688695, z: 0}
 --- !u!1001 &445984520
 Prefab:
   m_ObjectHideFlags: 0

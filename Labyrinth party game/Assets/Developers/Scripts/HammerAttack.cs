@@ -2,24 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerAttack : MonoBehaviour {
+public class HammerAttack : MonoBehaviour
+{
 
     [SerializeField]
     private PlayerController1[] playerController;
-    private MeshCollider Collider;
+    private BoxCollider Collider;
+    private Animator animation;
 
     private void Start()
     {
-        Collider = GetComponent<MeshCollider>();
+        Collider = GetComponent<BoxCollider>();
+        animation = GetComponent<Animator>();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animation.SetBool("ifPressed", true);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Player 1")
+        if (other.gameObject.name == "Player 1")
         {
             playerController[0].moveSpeed = 0;
             StartCoroutine(ReturnMovement(0));
         }
-        if(other.gameObject.name == "Player 2")
+        if (other.gameObject.name == "Player 2")
         {
             playerController[1].moveSpeed = 0;
             StartCoroutine(ReturnMovement(1));
@@ -42,10 +52,14 @@ public class HammerAttack : MonoBehaviour {
     }
     public void ActivateCollider()
     {
-        Collider.isTrigger = true;
+        Collider.enabled = true;
     }
     public void DisableCollider()
     {
-        Collider.isTrigger = false;
+        Collider.enabled = false;
+    }
+    public void StopAnimation()
+    {
+        animation.SetBool("ifPressed", false);
     }
 }
