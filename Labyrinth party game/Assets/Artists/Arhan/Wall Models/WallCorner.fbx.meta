@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Labyrinth party game/Assets/Artists/Arhan/Wall Models/WallCorner.fbx.meta
 guid: b6c384b893360b34f97b4affe9f2a352
+=======
+guid: 7efbfdc690aab5d45b2b0ff37c4cf5cd
+>>>>>>> f10cb4c6e83fb4678e07f858936a7597585ee77b:Labyrinth party game/Assets/Artists/Arhan/Wall Models/WallCorner.fbx.meta
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
