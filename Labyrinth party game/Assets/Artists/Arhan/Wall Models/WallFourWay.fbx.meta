@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Labyrinth party game/Assets/Artists/Arhan/Wall Models/WallFourWay.fbx.meta
+guid: da8cf4ad78372564fabfe6cacbaf6c0c
+=======
 guid: 44957e3c38cad6948acc06b7465855ca
+>>>>>>> f10cb4c6e83fb4678e07f858936a7597585ee77b:Labyrinth party game/Assets/Artists/Arhan/Wall Models/WallFourWay.fbx.meta
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
