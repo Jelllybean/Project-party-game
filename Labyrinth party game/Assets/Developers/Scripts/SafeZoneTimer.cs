@@ -18,19 +18,19 @@ public class SafeZoneTimer : MonoBehaviour {
         {
             if(other.name != "Char Player 1")
             {
-                other.GetComponent<PickUpScore>().ResetScore(1);
+                GameObject.Find("Char Player 1").GetComponent<PickUpScore>().ResetScore(1);
             }
             if (other.name != "Char Player 2")
             {
-                other.GetComponent<PickUpScore>().ResetScore(2);
+                GameObject.Find("Char Player 2").GetComponent<PickUpScore>().ResetScore(2);
             }
-            if (other.name != "Char Player 2")
+            if (other.name != "Char Player 3")
             {
-                other.GetComponent<PickUpScore>().ResetScore(3);
+                GameObject.Find("Char Player 3").GetComponent<PickUpScore>().ResetScore(3);
             }
-            if (other.name != "Char Player 2")
+            if (other.name != "Char Player 4")
             {
-                other.GetComponent<PickUpScore>().ResetScore(4);
+                GameObject.Find("Char Player 4").GetComponent<PickUpScore>().ResetScore(4);
             }
         }
     }
