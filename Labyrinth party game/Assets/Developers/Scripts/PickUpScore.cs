@@ -69,4 +69,9 @@ public class PickUpScore : MonoBehaviour {
     {
         _PlayerScore[m_Player] += 1;
     }
+
+    public void ResetScore(int m_Player)
+    {
+        _PlayerScore[m_Player] = 0;
+    }
 }

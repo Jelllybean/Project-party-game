@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 4634558509842256}
   - component: {fileID: 33755889388063010}
   - component: {fileID: 23072284572338448}
+  - component: {fileID: 64590735008350258}
   m_Layer: 0
   m_Name: Hammer_modl
   m_TagString: Untagged
@@ -563,6 +564,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4417676064994702}
   - component: {fileID: 95841880606394916}
+  - component: {fileID: 54092855970730498}
+  - component: {fileID: 114343548468110870}
   m_Layer: 0
   m_Name: Char Player 2
   m_TagString: Untagged
@@ -867,7 +870,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779511433743842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.78, y: 18.663782, z: -1.7929811}
+  m_LocalPosition: {x: -5.298397, y: 1.4269349e-16, z: -6.4263434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4634558509842256}
@@ -1276,7 +1279,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6e4030c913b28734ab0ba25ef47d9c18, type: 2}
+  - {fileID: 2100000, guid: db679f310e749f741a796280ba896131, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1303,6 +1306,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156563797715328}
   m_Mesh: {fileID: 4300002, guid: b679339571e5efe45bb50ce37d259517, type: 3}
+--- !u!54 &54092855970730498
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779511433743842}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &64590735008350258
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156563797715328}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: b679339571e5efe45bb50ce37d259517, type: 3}
 --- !u!95 &95841880606394916
 Animator:
   serializedVersion: 3
@@ -1321,6 +1353,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114343548468110870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779511433743842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c75b3d40b41c1144a1602eafac7e44a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  PlayerNumber: 2
+  RotationSpeed: 10
+  MainCamera: {fileID: 0}
 --- !u!137 &137806698193554822
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
