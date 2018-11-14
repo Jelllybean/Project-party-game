@@ -1,104 +1,16 @@
 fileFormatVersion: 2
-guid: b679339571e5efe45bb50ce37d259517
+guid: 3ef1fb6491be38d4d9cda24b8d91d63d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Hammer_modl
-    100004: joint1
-    100006: joint10
-    100008: joint11
-    100010: joint12
-    100012: joint13
-    100014: joint14
-    100016: joint15
-    100018: joint16
-    100020: joint17
-    100022: joint18
-    100024: joint19
-    100026: joint2
-    100028: joint20
-    100030: joint21
-    100032: joint22
-    100034: joint23
-    100036: joint24
-    100038: joint25
-    100040: joint26
-    100042: joint27
-    100044: joint28
-    100046: joint28 1
-    100048: joint29
-    100050: joint3
-    100052: joint30
-    100054: joint31
-    100056: joint32
-    100058: joint33
-    100060: joint34
-    100062: joint35
-    100064: joint36
-    100066: joint37
-    100068: joint38
-    100070: joint39
-    100072: joint4
-    100074: joint5
-    100076: joint6
-    100078: joint7
-    100080: joint8
-    100082: joint9
-    100084: pCube12
     400000: //RootNode
-    400002: Hammer_modl
-    400004: joint1
-    400006: joint10
-    400008: joint11
-    400010: joint12
-    400012: joint13
-    400014: joint14
-    400016: joint15
-    400018: joint16
-    400020: joint17
-    400022: joint18
-    400024: joint19
-    400026: joint2
-    400028: joint20
-    400030: joint21
-    400032: joint22
-    400034: joint23
-    400036: joint24
-    400038: joint25
-    400040: joint26
-    400042: joint27
-    400044: joint28
-    400046: joint28 1
-    400048: joint29
-    400050: joint3
-    400052: joint30
-    400054: joint31
-    400056: joint32
-    400058: joint33
-    400060: joint34
-    400062: joint35
-    400064: joint36
-    400066: joint37
-    400068: joint38
-    400070: joint39
-    400072: joint4
-    400074: joint5
-    400076: joint6
-    400078: joint7
-    400080: joint8
-    400082: joint9
-    400084: pCube12
-    2100000: lambert5
-    2100002: hame_UV
-    2300000: Hammer_modl
-    3300000: Hammer_modl
-    4300000: pCube12
-    4300002: Hammer_modl
-    6400000: Hammer_modl
-    7400000: Char_Hammer
+    2100000: CoinMat
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Point_Coin
+    7400000: Take 001
     9500000: //RootNode
-    13700000: pCube12
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -128,17 +40,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Char_Hammer
+      name: Take 001
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 9
+      lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -150,15 +62,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.9988338
-        functionName: StopAttack
-        data: 
-        objectReferenceParameter: {fileID: 1473647009361524, guid: 18f4f300819167b4d88fdd86773ec637,
-          type: 2}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
@@ -166,9 +70,9 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 50
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -186,7 +90,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 0.5
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
