@@ -51,12 +51,6 @@ public class PlayerController1 : MonoBehaviour
         {
             moveSpeed = 15;
         }
-
-        if (moveSpeed <= 5)
-        {
-            moveSpeed = 5;
-        }
-
         if (CharacterAnim.GetBool("IfAttack") == true)
         {
             CharacterAnim.SetBool("IfIdle", false);

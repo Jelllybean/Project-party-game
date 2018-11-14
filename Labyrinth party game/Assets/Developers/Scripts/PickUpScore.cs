@@ -10,20 +10,34 @@ public class PickUpScore : MonoBehaviour {
     private Text[] m_PlayerScoreText;
 
     private int[] _PlayerScore = new int[4];
+    [SerializeField]
+    private bool Player1, Player2, Player3, Player4;
 
     private void Start()
     {
-        m_PlayerScoreText[0].text = "Player 1: ";
-        m_PlayerScoreText[1].text = "Player 2: ";
-        m_PlayerScoreText[2].text = "Player 3: ";
-        m_PlayerScoreText[3].text = "Player 4: ";
     }
     private void Update()
     {
-        //print(_PlayerScore[0]);
+        print("speler" + _PlayerScore[0]);
         //print(_PlayerScore[1]);
         //print(_PlayerScore[2]);
         //print(_PlayerScore[3]);
+        if(Player1 == true)
+        {
+            m_PlayerScoreText[0].text = "Player 1: " + _PlayerScore[0];
+        }
+        if (Player2 == true)
+        {
+            m_PlayerScoreText[1].text = "Player 2: " + _PlayerScore[1];
+        }
+        if (Player3 == true)
+        {
+            m_PlayerScoreText[2].text = "Player 3: " + _PlayerScore[2];
+        }
+        if (Player4 == true)
+        {
+            m_PlayerScoreText[3].text = "Player 4: " + _PlayerScore[3];
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

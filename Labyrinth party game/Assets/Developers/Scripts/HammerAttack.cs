@@ -9,11 +9,6 @@ public class HammerAttack : MonoBehaviour
     private PlayerController1[] playerController;
     [SerializeField]
     private ParticleSystem[] starParticles;
-    private void Start()
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Player 1")
