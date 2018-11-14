@@ -7,59 +7,48 @@ public class HammerAttack : MonoBehaviour
 
     [SerializeField]
     private PlayerController1[] playerController;
-    private BoxCollider Collider;
-    private Animator animation;
-
+    [SerializeField]
+    private ParticleSystem[] starParticles;
     private void Start()
     {
-        Collider = GetComponent<BoxCollider>();
-        animation = GetComponent<Animator>();
+
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            animation.SetBool("ifPressed", true);
-        }
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Player 1")
         {
-            playerController[0].moveSpeed = 0;
-            StartCoroutine(ReturnMovement(0));
+            OnHit(0);
+            ReturnMovement(0);
         }
         if (other.gameObject.name == "Player 2")
         {
-            playerController[1].moveSpeed = 0;
-            StartCoroutine(ReturnMovement(1));
+            OnHit(1);
+            ReturnMovement(1);
         }
         if (other.gameObject.name == "Player 3")
         {
-            playerController[2].moveSpeed = 0;
-            StartCoroutine(ReturnMovement(2));
+            OnHit(2);
+            ReturnMovement(2);
         }
         if (other.gameObject.name == "Player 4")
         {
-            playerController[3].moveSpeed = 0;
-            StartCoroutine(ReturnMovement(3));
+            OnHit(3);
+            ReturnMovement(3);
         }
+    }
+    private void OnHit(int Player)
+    {
+        playerController[Player].moveSpeed = 0;
+        playerController[Player].RotationSpeed = 0;
+        StartCoroutine(ReturnMovement(Player));
+        starParticles[Player].Play();
     }
     IEnumerator ReturnMovement(int player)
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         playerController[player].moveSpeed = 10;
-    }
-    public void ActivateCollider()
-    {
-        Collider.enabled = true;
-    }
-    public void DisableCollider()
-    {
-        Collider.enabled = false;
-    }
-    public void StopAnimation()
-    {
-        animation.SetBool("ifPressed", false);
+        playerController[player].RotationSpeed = 10;
+        starParticles[player].Stop();
     }
 }

@@ -12,7 +12,7 @@ public class ConveyorBelt : MonoBehaviour
     [SerializeField] private bool isLeft;
     [SerializeField] private bool isUp;
     [SerializeField] private bool isDown;
-
+    [SerializeField] private float f_Force;
 
     private int m_currentPlayer;
     Vector3 _Forward;
@@ -56,19 +56,19 @@ public class ConveyorBelt : MonoBehaviour
     {
         if(isUp == true)
         {
-            playerObj[m_currentPlayer].transform.Translate(Vector3.forward * 7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.forward * f_Force * Time.deltaTime, Space.World);
         }
         if(isDown == true)
         {
-            playerObj[m_currentPlayer].transform.Translate(Vector3.forward * -7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.forward * -f_Force * Time.deltaTime, Space.World);
         }
         if(isRight == true)
         {
-            playerObj[m_currentPlayer].transform.Translate(Vector3.right * 7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.right * f_Force * Time.deltaTime, Space.World);
         }
         if(isLeft == true)
         {
-            playerObj[m_currentPlayer].transform.Translate(Vector3.right * -7.5f * Time.deltaTime, Space.World);
+            playerObj[m_currentPlayer].transform.Translate(Vector3.right * -f_Force * Time.deltaTime, Space.World);
         }
     }
 }

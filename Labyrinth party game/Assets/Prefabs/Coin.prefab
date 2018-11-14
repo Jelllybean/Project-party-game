@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1310276065422208}
+  m_RootGameObject: {fileID: 1748638028732510}
   m_IsPrefabAsset: 1
---- !u!1 &1310276065422208
+--- !u!1 &1748638028732510
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4413071853355066}
-  - component: {fileID: 33756769926055858}
-  - component: {fileID: 23360024054394236}
-  - component: {fileID: 95121402405899146}
-  - component: {fileID: 64896128669156964}
+  - component: {fileID: 4651273540310508}
+  - component: {fileID: 33204664513096814}
+  - component: {fileID: 23122976180497262}
+  - component: {fileID: 95812398268525170}
+  - component: {fileID: 64336849051642118}
   m_Layer: 0
-  m_Name: SwirlPad
-  m_TagString: Reverser
+  m_Name: Coin
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4413071853355066
+--- !u!4 &4651273540310508
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310276065422208}
+  m_GameObject: {fileID: 1748638028732510}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.266525, y: -2.3727036, z: 63.0467}
-  m_LocalScale: {x: 8, y: 3.1948, z: 8}
+  m_LocalPosition: {x: -6.289047, y: -1.05, z: -7.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23360024054394236
+  m_LocalEulerAnglesHint: {x: 9.636332e-15, y: 127.08056, z: 8.669683e-15}
+--- !u!23 &23122976180497262
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310276065422208}
+  m_GameObject: {fileID: 1748638028732510}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 9eed7694837c0fd43b7000b85a8fa183, type: 2}
+  - {fileID: 2100000, guid: 3ef1fb6491be38d4d9cda24b8d91d63d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,19 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33756769926055858
+--- !u!33 &33204664513096814
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310276065422208}
-  m_Mesh: {fileID: 4300000, guid: b8bd18a11c7111d4eada103830c1c20a, type: 3}
---- !u!64 &64896128669156964
+  m_GameObject: {fileID: 1748638028732510}
+  m_Mesh: {fileID: 4300000, guid: 3ef1fb6491be38d4d9cda24b8d91d63d, type: 3}
+--- !u!64 &64336849051642118
 MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310276065422208}
+  m_GameObject: {fileID: 1748638028732510}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -98,17 +98,17 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: b8bd18a11c7111d4eada103830c1c20a, type: 3}
---- !u!95 &95121402405899146
+  m_Mesh: {fileID: 4300000, guid: 3ef1fb6491be38d4d9cda24b8d91d63d, type: 3}
+--- !u!95 &95812398268525170
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310276065422208}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b8bd18a11c7111d4eada103830c1c20a, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6da82fedd8d7e284cab60ef0f4f77648, type: 2}
+  m_GameObject: {fileID: 1748638028732510}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: 3ef1fb6491be38d4d9cda24b8d91d63d, type: 3}
+  m_Controller: {fileID: 9100000, guid: cd8aa3ccefabdf444be5c39421d43650, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
